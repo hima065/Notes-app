@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background: transparent;
+  color: #eef3ff;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 40px 18px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(circle at top left, rgba(171, 59, 255, 0.26), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(33, 150, 255, 0.18), transparent 22%),
+    linear-gradient(150deg, #081126 0%, #111a3a 45%, #0f1329 100%);
+  overflow: hidden;
+}
+
+.app-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 22%),
+    radial-gradient(circle at 80% 80%, rgba(84, 196, 255, 0.08), transparent 20%);
+}
+
+.container {
+  position: relative;
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 40px 120px rgba(10, 14, 35, 0.28);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(18, 28, 59, 0.72);
+}
+
+.glass-card {
+  background: rgba(18, 28, 59, 0.72);
+}
+
+h1,
+h2,
+h3 {
+  color: #f8f9ff;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f7f8ff;
+  outline: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(171, 59, 255, 0.75);
+  transform: translateY(-1px);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 22px;
+  margin-top: 10px;
+  border-radius: 999px;
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, rgba(171, 59, 255, 0.95), rgba(46, 149, 255, 0.95));
+  box-shadow: 0 18px 30px rgba(45, 145, 255, 0.22);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 38px rgba(45, 145, 255, 0.28);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.note-card {
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 22px 40px rgba(9, 16, 42, 0.12);
+}
+
+.note-card h3 {
+  margin-top: 0;
+}
+
+.note-card p {
+  margin: 12px 0 0;
+  line-height: 1.7;
+  color: #e6ebff;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 24px 14px 40px;
+  }
+
+  .container {
+    padding: 24px;
+  }
+}
